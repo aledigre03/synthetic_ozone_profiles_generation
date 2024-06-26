@@ -1,5 +1,7 @@
 # synthetic_ozone_profiles_generation
 This repository contains my work on the creation of syntethic ozone profiles to be used in the software PlaSim. 
+
+
 Files description:
 -integral.m calculates the values of the concentration of ozone in a standard ozone profile in Dbson units
 -sigmaP.m calculates the values of the sigma pressure using the barometric equation
