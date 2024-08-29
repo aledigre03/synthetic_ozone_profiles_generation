@@ -2,17 +2,10 @@ import numpy as np
 
 #Ozone profile generator for PlaSim
 
-output_file= 'N032_level_0237_Control-NOspe-DecAle.sra'
-
-#data
-
-longitude = np.zeros(64);
+output_file= 'N032_level_0237_Control-NOspe-Dec.sra'
 
 #Populate the longitude array
-for i in range(32):
-    longitude[i] = 180 + (i) * (360 / 64)
-for i in range(33, 64):
-    longitude[i] = (i - 33) * (360 / 64)
+longitude= np.linspace(180, -180, 64)
 
 latitude = [85.8, 80.3, 74.7, 69.2, 63.7, 58.1, 52.6, 47.1, 41.5, 36.0, 30.5, 24.9,
             19.4, 13.8, 8.3, 2.8, -2.8, -8.3, -13.8, -19.4, -24.9, -30.5, -36.0,
@@ -35,208 +28,233 @@ with open(output_file, 'w') as f:
     for z in range(12):
         if z == 0:
             # January
-            Z1a = 2.8
-            Z1b = 12
-            Z1c = 40
-            Z1d = -25
-            Z1e = 2
-            Z2a = 9.5
-            Z2b = 90
-            Z2c = 60
-            Z2d = -20
-            Z2e = 6
-            Z3a = 5.8
-            Z3b = -55
-            Z3c = 60
-            Z3d = -22
-            Z3e = 6
+            Z1a= 3.5;
+            Z1b=-8;
+            Z1c=40;
+            Z1d=-24;
+            Z1e=5;
+
+            Z3a=6;
+            Z3b=55;
+            Z3c=60;
+            Z3d=-22;
+            Z3e=9;
+
+            Z2a=7.5;
+            Z2b=-90;
+            Z2c=60;
+            Z2d=-18;
+            Z2e=9;
         elif z == 1:
             # February
-            Z1a = 3
-            Z1b = 2
-            Z1c = 40
-            Z1d = -25
-            Z1e = 2
-            Z2a = 9.5
-            Z2b = 90
-            Z2c = 60
-            Z2d = -20
-            Z2e = 6
-            Z3a = 5.8
-            Z3b = -60
-            Z3c = 60
-            Z3d = -22
-            Z3e = 6
+            Z1a= 3;
+            Z1b=-2;
+            Z1c=40;
+            Z1d=-25;
+            Z1e=5;
+
+            Z2a=8;
+            Z2b=-90;
+            Z2c=60;
+            Z2d=-20;
+            Z2e=9;
+
+            Z3a=5.8;
+            Z3b=60;
+            Z3c=60;
+            Z3d=-22;
+            Z3e=9;
+
         elif z == 2:
             # March
-            Z1a = 1
-            Z1b = 2
-            Z1c = 40
-            Z1d = -25
-            Z1e = 2
-            Z2a = 9.5
-            Z2b = 90
-            Z2c = 60
-            Z2d = -20
-            Z2e = 6
-            Z3a = 3
-            Z3b = -55
-            Z3c = 55
-            Z3d = -20
-            Z3e = 6
+            Z1a= 2.5;
+            Z1b=-2;
+            Z1c=40;
+            Z1d=-25;
+            Z1e=5;
+
+            Z2a=8;
+            Z2b=-90;
+            Z2c=60;
+            Z2d=-20;
+            Z2e=9;
+
+            Z3a=5;
+            Z3b=55;
+            Z3c=55;
+            Z3d=-20;
+            Z3e=9;
         elif z == 3:
             # April
-            Z1a = 1
-            Z1b = 2
-            Z1c = 40
-            Z1d = -15
-            Z1e = 2
-            Z2a = 7.5
-            Z2b = 90
-            Z2c = 60
-            Z2d = -10
-            Z2e = 6
-            Z3a = 4.3
-            Z3b = -60
-            Z3c = 85
-            Z3d = -11
-            Z3e = 6
+            Z1a= 3;
+            Z1b=40;
+            Z1c=60;
+            Z1d=-29;
+            Z1e=3;
+
+            Z2a=7.5;
+            Z2b=-90;
+            Z2c=60;
+            Z2d=-20;
+            Z2e=9;
+
+            Z3a=4.3;
+            Z3b=80;
+            Z3c=85;
+            Z3d=-22;
+            Z3e=9;
         elif z == 4:
             # May
-            Z1a = 2
-            Z1b = 0
-            Z1c = 40
-            Z1d = -16
-            Z1e = 2
-            Z2a = 5.8
-            Z2b = 80
-            Z2c = 75
-            Z2d = -12
-            Z2e = 6
-            Z3a = 5.9
-            Z3b = -95
-            Z3c = 75
-            Z3d = -12
-            Z3e = 6
+            Z1a= 3;
+            Z1b=0;
+            Z1c=40;
+            Z1d=-30;
+            Z1e=5;
+
+            Z2a=7;
+            Z2b=-80;
+            Z2c=75;
+            Z2d=-22;
+            Z2e=9;
+
+            Z3a=7.1;
+            Z3b=95;
+            Z3c=75;
+            Z3d=-22;
+            Z3e=9;
         elif z == 5:
             # June
-            Z1a = 2
-            Z1b = -2
-            Z1c = 40
-            Z1d = -16
-            Z1e = 2
-            Z2a = 5.4
-            Z2b = 50
-            Z2c = 60
-            Z2d = -12
-            Z2e = 6
-            Z3a = 6.6
-            Z3b = -90
-            Z3c = 85
-            Z3d = -11.5
-            Z3e = 6
+            Z1a= 3.5;
+            Z1b=-11;
+            Z1c=40;
+            Z1d=-30;
+            Z1e=5;
+
+            Z2a=7;
+            Z2b=-70;
+            Z2c=60;
+            Z2d=-22;
+            Z2e=9;
+
+            Z3a=7.6;
+            Z3b=90;
+            Z3c=85;
+            Z3d=-21;
+            Z3e=9;
         elif z == 6:
             # July
-            Z1a = 0.5
-            Z1b = -2
-            Z1c = 40
-            Z1d = -16
-            Z1e = 2
-            Z2a = 5.2
-            Z2b = 50
-            Z2c = 60
-            Z2d = -12
-            Z2e = 6
-            Z3a = 7.3
-            Z3b = -90
-            Z3c = 85
-            Z3d = -11.5
-            Z3e = 6
+            Z1a= 2.5;
+            Z1b=10;
+            Z1c=40;
+            Z1d=-30;
+            Z1e=5;
+
+            Z2a=5.2;
+            Z2b=-50;
+            Z2c=60;
+            Z2d=-22;
+            Z2e=9;
+
+            Z3a=7.3;
+            Z3b=90;
+            Z3c=85;
+            Z3d=-21;
+            Z3e=9;
         elif z == 7:
             # August
-            Z1a = 3
-            Z1b = -3.5
-            Z1c = 80
-            Z1d = -16
-            Z1e = 3
-            Z2a = 5.1
-            Z2b = 50
-            Z2c = 60
-            Z2d = -10
-            Z2e = 6
-            Z3a = 7.5
-            Z3b = -100
-            Z3c = 85
-            Z3d = -10
-            Z3e = 6
+            Z1a= 3.5;
+            Z1b=8;
+            Z1c=80;
+            Z1d=-30;
+            Z1e=5;
+
+            Z2a=5.1;
+            Z2b=-50;
+            Z2c=60;
+            Z2d=-20;
+            Z2e=9;
+
+            Z3a=7.5;
+            Z3b=100;
+            Z3c=85;
+            Z3d=-20;
+            Z3e=9;
         elif z == 8:
             # September
-            Z1a = 3
-            Z1b = -3.5
-            Z1c = 80
-            Z1d = -16
-            Z1e = 3
-            Z2a = 5.1
-            Z2b = 50
-            Z2c = 60
-            Z2d = -10
-            Z2e = 6
-            Z3a = 9.5
-            Z3b = -100
-            Z3c = 85
-            Z3d = -10
-            Z3e = 6
+            Z1a= 3.5;
+            Z1b=0;
+            Z1c=80;
+            Z1d=-30;
+            Z1e=5;
+
+            Z2a=5.1;
+            Z2b=-55;
+            Z2c=60;
+            Z2d=-20;
+            Z2e=9;
+
+            Z3a=9;
+            Z3b=100;
+            Z3c=85;
+            Z3d=-20;
+            Z3e=9;
         elif z == 9:
             # October
-            Z1a = 3
-            Z1b = -3.5
-            Z1c = 80
-            Z1d = -17
-            Z1e = 3
-            Z2a = 5.5
-            Z2b = 90
-            Z2c = 90
-            Z2d = -10
-            Z2e = 8
-            Z3a = 9.5
-            Z3b = -110
-            Z3c = 85
-            Z3d = -10
-            Z3e = 6
+            Z1a= 3;
+            Z1b=3.5;
+            Z1c=80;
+            Z1d=-30;
+            Z1e=5;
+
+            Z2a=5.5;
+            Z2b=-90;
+            Z2c=90;
+            Z2d=-23;
+            Z2e=9;
+
+            Z3a=9;
+            Z3b=110;
+            Z3c=85;
+            Z3d=-23;
+            Z3e=9;
         elif z == 10:
             # November
-            Z1a = 2.5
-            Z1b = -5
-            Z1c = 80
-            Z1d = -17
-            Z1e = 4
-            Z2a = 6.1
-            Z2b = 90
-            Z2c = 90
-            Z2d = -10
-            Z2e = 8
-            Z3a = 7.2
-            Z3b = -110
-            Z3c = 85
-            Z3d = -10
-            Z3e = 6
+            Z1a= 2.5;
+            Z1b=5;
+            Z1c=80;
+            Z1d=-28;
+            Z1e=5;
+
+            Z2a=5.5;
+            Z2b=-90;
+            Z2c=90;
+            Z2d=-21;
+            Z2e=9;
+
+            Z3a=7.2;
+            Z3b=110;
+            Z3c=85;
+            Z3d=-21;
+            Z3e=9;
         elif z == 11:
             # December
-            Z1a = 1.8
-            Z1b = 1
-            Z1c = 40
-            Z1d = -16
-            Z1e = -2
-            Z2a = 7.5
-            Z2b = 90
-            Z2c = 60
-            Z2d = -10
-            Z2e = 4.5
-            Z3a = 4.3
-            Z3b = -60
-            Z3c = 85
-            Z3d = -11
-            Z3e = 6
+            Z1a= 2;
+            Z1b=-3;
+            Z1c=40;
+            Z1d=-29;
+            Z1e=5;
+
+            Z2a=7.5;
+            Z2b=-90;
+            Z2c=60;
+            Z2d=-20;
+            Z2e=9;
+
+            Z3a=4.5;
+            Z3b=70;
+            Z3c=85;
+            Z3d=-22;
+            Z3e=9;
         #237 is the option on PlaSim, the second number is the altitude level, the third number is the month, all in 64 longitudes and 32 latitudes
         for i in range(len(altitude)):
             if z in range(9):
@@ -267,7 +285,7 @@ with open(output_file, 'w') as f:
                 for index, value in enumerate(ozone_values):
                     #enumerate creates a tuple of both value and index of the ozone_value array
                     f.write(' {:.3E}'.format(value))
-                    #,format prints what is included in the value section of the tuple created by enumerate
+                    #format prints what is included in the value section of the tuple created by enumerate
                     if (index + 1) % 8 == 0:
                         #if the number of values in a row is not a multiple of 8 it changes row
                         f.write('\n')
