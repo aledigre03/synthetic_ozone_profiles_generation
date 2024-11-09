@@ -18,7 +18,7 @@ ts= ds['ts'].isel(time=0)
 
 lev_reversed = ds['lev'][::-1]
 
-# Show the plot
+
 plt.figure(figsize=(10, 6))
 contour = plt.contourf(ds['lat'], lev_reversed, ozone_data, cmap='viridis', levels=20)
 plt.colorbar(contour, label='Ozone Concentration')
