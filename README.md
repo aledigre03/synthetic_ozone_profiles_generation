@@ -15,7 +15,7 @@ Files description:
 	-N032_level_0237_Control-NOspe-DecAle.sra is an example of output from ozone_profile_generator.py
 
  	-o3reader.py reads a NetCDF file produced by PlaSim and creates an ozone and surface temperature plot
-    averaged over time and longitude, more options are commented out
+     averaged over time and longitude, more options are commented out
 
   	-tvstime reads a NetCDF file produced by PlaSim and produces a graph of surface temperature vs time
 
