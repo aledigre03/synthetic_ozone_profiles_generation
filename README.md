@@ -4,11 +4,13 @@ This repository contains my work on the creation of syntethic ozone profiles to 
 
 Files description:
 
-	-integral.m calculates the values of the concentration of ozone in a standard ozone profile in Dbson units
+	-integral.m calculates the values of the concentration of ozone in a standard ozone profile 
+     in Dobson units
  
 	-sigmaP.m calculates the values of the sigma pressure using the barometric equation
  
-	-snapshots.m are profiles created for each month of the yeaar based on reconstrutictions performed by a chemistry model
+	-snapshots.m are profiles created for each month of the yeaar based on reconstrutictions 
+     performed by a chemistry model
  
 	-ozone_profile_generator.py creates a file formatted for PlaSim
  
