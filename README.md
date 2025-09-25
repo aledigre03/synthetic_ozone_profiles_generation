@@ -11,6 +11,8 @@ Files description:
  
 	-snapshots.m are profiles created for each month of the yeaar based on reconstrutictions 
      performed by a chemistry model
+
+	-months_plot.m plots all the profiles in one single clear image for publication
  
 	-ozone_profile_generator.py creates a file formatted for PlaSim
  
