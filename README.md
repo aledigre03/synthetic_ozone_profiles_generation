@@ -23,4 +23,6 @@ Files description:
 
   	-tvstime reads a NetCDF file produced by PlaSim and produces a graph of surface temperature vs time
 
+	-yearly_plot.py plots the necessary data for the analysys on a temperature vs. time grid
+
  
